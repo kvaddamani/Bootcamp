@@ -4,6 +4,8 @@ metadata:
   name: {{ include "bootcamp.fullname" . }}
   labels:
     {{- include "bootcamp.labels" . | nindent 4 }}
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   type: {{ .Values.service.type }}
   ports:
