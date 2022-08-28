@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 FROM eclipse-temurin:17-jdk
-
+EXPOSE 8081
+EXPOSE 8080
 VOLUME /tmp
 RUN apt update
 RUN apt install maven -y
